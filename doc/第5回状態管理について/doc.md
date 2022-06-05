@@ -58,6 +58,8 @@ const App => () {
 }
 ```
 
+※詳しくは[React Docs Beta版](https://beta-reactjs-org-git-effects-fbopensource.vercel.app/)へ
+
 ## グローバルState管理
 各コンポーネント単位で状態を管理するのではなく、グローバルで管理することによって各コンポーネントから値を参照できる。  
 
