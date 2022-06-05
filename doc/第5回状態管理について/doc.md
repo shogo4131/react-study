@@ -11,7 +11,8 @@
 
 
 ## グローバルState管理
-グローバルで状態管理を行い、各コンポーネントから値を参照できる。
+グローバルで状態管理を行い、各コンポーネントから値を参照できる。  
+下記は状態管理ライブラリ一覧。
 
 - 2021年 JavaScript Rising Starts (State Management部門)
 ![スクリーンショット 2022-06-05 15 41 55](https://user-images.githubusercontent.com/60390181/172038834-88e9cebf-df63-493a-bf97-6a2b895e7e9e.png)
