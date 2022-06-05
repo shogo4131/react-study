@@ -75,3 +75,11 @@ const App => () {
 ![スクリーンショット 2022-06-05 15 55 07](https://user-images.githubusercontent.com/60390181/172039265-c15e5ff3-3727-4bdf-9c9e-c2ffbe10802b.png)
 
 ※参考 [npm trends](https://www.npmtrends.com/jotai-vs-recoil-vs-redux-vs-zustand-vs-valtio)
+
+### どうやって状態管理を行うのか
+- Redux、Zustand
+  - 1つの大きな塊(オブジェクト)で管理する
+  - Reactの外の世界で管理されている
+  
+![スクリーンショット 2022-06-06 0 19 26](https://user-images.githubusercontent.com/60390181/172057643-f6bf90f4-1f99-46f4-b184-82dacb5a727c.png)
+
