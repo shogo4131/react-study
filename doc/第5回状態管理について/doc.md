@@ -83,3 +83,7 @@ const App => () {
   
 ![スクリーンショット 2022-06-06 0 19 26](https://user-images.githubusercontent.com/60390181/172057643-f6bf90f4-1f99-46f4-b184-82dacb5a727c.png)
 
+- Recoil、Jotai
+  - atom(個別)でstateを管理する
+  - React内の世界で管理されている
+
