@@ -2,10 +2,12 @@
 ローカル、グローバルの状態管理の方法がある。
 
 ## コンポーネントツリー
-![スクリーンショット 2022-06-05 20 30 00](https://user-images.githubusercontent.com/60390181/172048409-9603785b-3a3e-4668-816a-89598732df45.png)
+![スクリーンショット 2022-06-05 21 05 47](https://user-images.githubusercontent.com/60390181/172049608-bf419d28-a4f3-4409-af07-449c6743acbf.png)
+
 
 ## ローカルState管理
-各コンポーネント内で状態管理を行う。
+各コンポーネント内で状態管理を行う。  
+規模が小さいアプリや、複数のコンポーネントにまたがって使用する値がない場合はローカルでの管理が好ましい。
 
 ### useState
 - 各コンポーネントで状態を管理して、必要であれば子供のコンポーネントに値を渡していく(コンポーネントツリーの構造通り)
@@ -25,13 +27,43 @@ const App = () => {
 ```
 
 ### useReducer
+- useStateと同じく、各コンポーネントで状態を管理する
+- Context APIを使用することによって、複数のコンポーネントから値を取得できる(あくまでコンポーネントの上下関係はある)
+- 各コンポーネントでuseStateの値が肥大化してきた時に、useReducerでローカルstateをまとめたりする
+- 現在のstateと更新されたstateを比較してレンダリングを行うか判定するため、不要なレンダリングを避けることができる
 
+```JavaScript
+const initialState = { count: 0 };
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case 'increment':
+      return {count: state.count + 1};
+    case 'decrement':
+      return {count: state.count - 1};
+    default:
+      throw new Error();
+  }
+}
+
+const App => () {
+  const [state, dispatch] = useReducer(reducer, initialState);
+  return (
+    <>
+      <CountView count={state.count} />
+      <button onClick={() => dispatch({type: 'decrement'})}>-</button>
+      <button onClick={() => dispatch({type: 'increment'})}>+</button>
+    </>
+  );
+}
+```
 
 ## グローバルState管理
 各コンポーネント単位で状態を管理するのではなく、グローバルで管理することによって各コンポーネントから値を参照できる。  
 
 ### なぜ、状態管理ライブラリを使用するのか
-
+- コンポーネントの子階層が深くなってきたりすると、バケツリレーで値を渡していくのはコードの冗長化につながるため
+- 様々なコンポーネントに
 
 
 下記は状態管理ライブラリ一覧。
