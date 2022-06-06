@@ -93,8 +93,20 @@ const App => () {
 
 ### 各ライブラリの紹介
 #### Redux
+公式：https://redux.js.org/
+
+- FaceBook(現Meta)社が提唱している、Fluxアーキテクチャを採用している。
+- 単一方向のにデータが流れていくので、データの流れを追いやすくなる。
+- 大規模なアプリ開発では力を発揮する
+- JavsScript製なので実はVue、Vanila JSなどでも使用できる。
+- action、reducer、dispatch、storeなどファイルを分けて管理するのが一般的なので、ファイル数が増加してしまう。
+- Reduxで非同期処理を実現させるには、別でmiddllewareライブラリ(redux-thunk、redux-sage)を導入しないといけない。
+- 恐らく一番最古残でシェア率が高い状態管理ライブラリ。
+- どうしても初学者には学習コストが高くなってしまう。
+- redux-devtoolというChromeの拡張機能があり、Stateの流れを画面で確認できる
 
 #### Zustand
+公式： https://zustand.surge.sh/ (多分ちゃんとした公式があったんですが見つからず、、)
 
 #### Recoil
 
