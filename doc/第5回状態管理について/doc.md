@@ -89,3 +89,17 @@ const App => () {
   - atom(個別)でstateを管理する
   - React内の世界で管理されている
 
+![スクリーンショット 0004-06-06 15 12 48](https://user-images.githubusercontent.com/60390181/172105521-29e69735-0ee9-47bd-bc98-5518e081d8a4.png)
+
+### 各ライブラリの紹介
+#### Redux
+
+#### Zustand
+
+#### Recoil
+
+#### Jotai
+
+
+
+
