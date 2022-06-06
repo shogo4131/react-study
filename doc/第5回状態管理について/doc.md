@@ -103,12 +103,26 @@ const App => () {
 - Reduxで非同期処理を実現させるには、別でmiddllewareライブラリ(redux-thunk、redux-sage)を導入しないといけない。
 - 恐らく一番最古残でシェア率が高い状態管理ライブラリ。
 - どうしても初学者には学習コストが高くなってしまう。
-- redux-devtoolというChromeの拡張機能があり、Stateの流れを画面で確認できる
+- [redux devtools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd)というChromeの拡張機能があり、Stateの流れを画面で確認できる
 
 #### Zustand
 公式： https://zustand.surge.sh/ (多分ちゃんとした公式があったんですが見つからず、、)
 
+- reduxのような無駄なボイラーテンプレートと作成する必要がなく簡潔に記述できる(reduxとredux-toolkitをもっと簡潔にしたイメージ)
+- redux devtoolsに対応している
+- reduxから置き換える際に、reudxを理解していると学習コストがほぼかからないので最適
+- パッケージのサイズがめちゃくちゃ軽い
+
 #### Recoil
+公式：https://recoiljs.org/
+
+- 大きく分けてatom、selectorという概念がある
+- 基本はatomのみで状態管理は完結できる
+- atomが状態管理を行う部分、selectorはatomから派生させたい値を作りたい時とかに利用できそう
+- atomを一つにまとめてReduxのStoreのように扱うこともできる
+- [Recoil detools](https://chrome.google.com/webstore/detail/recoil-dev-tools/dhjcdlmklldodggmleehadpjephfgflc)があり、atomの状態を確認できる
+- なんでもできてしまうので、チーム内で方針を決めておかないと、データの流れが見えずらくなる可能性がある。
+- 正式リリースではないので、ここから変更される可能性がある。
 
 #### Jotai
 
