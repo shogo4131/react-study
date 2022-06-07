@@ -19,7 +19,7 @@ const App = () => {
   const [count, setCount] = useState(0);
   return (
     <>
-      <CountView count={count} />
+      <span>Count: {count}</span/>
       <button onClick={() => setCount(initialCount)}>Reset</button>
       <button onClick={() => setCount(prevCount => prevCount - 1)}>-</button>
       <button onClick={() => setCount(prevCount => prevCount + 1)}>+</button>
@@ -52,7 +52,7 @@ const App => () {
   const [state, dispatch] = useReducer(reducer, initialState);
   return (
     <>
-      <CountView count={state.count} />
+     <span>Count: {count}</span/>
       <button onClick={() => dispatch({type: 'decrement'})}>-</button>
       <button onClick={() => dispatch({type: 'increment'})}>+</button>
     </>
