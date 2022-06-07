@@ -1,7 +1,9 @@
 # React 状態管理とは
 ローカル、グローバルの状態管理の方法がある。
 
-## コンポーネントツリー
+## バケツリレーを理解する
+- 親コンポーネントから子コンポーネントに値を渡していくフロー
+
 ![スクリーンショット 2022-06-05 21 05 47](https://user-images.githubusercontent.com/60390181/172049608-bf419d28-a4f3-4409-af07-449c6743acbf.png)
 
 
@@ -17,7 +19,7 @@ const App = () => {
   const [count, setCount] = useState(0);
   return (
     <>
-      <CountView count={count} />
+      <span>Count: {count}</span/>
       <button onClick={() => setCount(initialCount)}>Reset</button>
       <button onClick={() => setCount(prevCount => prevCount - 1)}>-</button>
       <button onClick={() => setCount(prevCount => prevCount + 1)}>+</button>
@@ -50,7 +52,7 @@ const App => () {
   const [state, dispatch] = useReducer(reducer, initialState);
   return (
     <>
-      <CountView count={state.count} />
+     <span>Count: {count}</span/>
       <button onClick={() => dispatch({type: 'decrement'})}>-</button>
       <button onClick={() => dispatch({type: 'increment'})}>+</button>
     </>
