@@ -1,62 +1,50 @@
 import type { NextPage } from "next";
-import { FC, useCallback, useState } from "react";
-import Header from "../component/Header";
+import { FC, useState } from "react";
 
-import styles from "../styles/Home.module.css";
-
+// 家族の住んでいる場所は別々
 // 親コンポーネント
-const Home: NextPage = () => {
-  const [addCount, setAddCount] = useState(0);
-  const [decreaseCount, setDecreaseCount] = useState(0);
-
-  const onClickCountUpHandler = useCallback(
-    () => setAddCount((prev) => prev + 1),
-    [setAddCount]
-  );
-
-  const onClickCountDownHandler = useCallback(
-    () => setDecreaseCount((prev) => prev - 1),
-    [setDecreaseCount]
-  );
+const Parent: NextPage = () => {
+  // 両親がお金を保持している
+  const [money, setMoney] = useState(10000);
 
   return (
-    <div className={styles.container}>
-      <Header />
-      <h1>Home</h1>
-
-      <div style={{ display: "flex" }}>
-        {/* 親コンポーネントだけで管理できるならuseState一択になる */}
-        {/* {addCount}
-        {decreaseCount} */}
-        <AddCountView addCount={addCount} />
-        <DecreaseCountView decreaseCount={decreaseCount} />
-      </div>
-      <div>
-        <button
-          type="button"
-          onClick={onClickCountUpHandler}
-          style={{ marginRight: 10 }}
-        >
-          +
-        </button>
-        <button type="button" onClick={onClickCountDownHandler}>
-          -
-        </button>
-      </div>
+    <div style={{ backgroundColor: "white" }}>
+      <span style={{ display: "block", height: 250 }}>両親</span>
+      <EldestSon money={money} />
     </div>
   );
 };
 
-// +カウンターを表示する子コンポーネント
-const AddCountView: FC<{ addCount: number }> = ({ addCount }) => {
-  return <div>{addCount}</div>;
+// 長男コンポーネント
+const EldestSon: FC<{ money: number }> = ({ money }) => {
+  return (
+    <div style={{ backgroundColor: "red" }}>
+      <span style={{ display: "block", height: 250 }}>長男</span>
+      <span>{money}円</span>
+      <SecondSon money={money} />
+    </div>
+  );
 };
 
-// -カウンターを表示する子コンポーネント
-const DecreaseCountView: FC<{ decreaseCount: number }> = ({
-  decreaseCount,
-}) => {
-  return <div style={{ marginLeft: 17 }}>{decreaseCount}</div>;
+// 次男コンポーネント
+const SecondSon: FC<{ money: number }> = ({ money }) => {
+  return (
+    <div style={{ backgroundColor: "green" }}>
+      <span style={{ display: "block", height: 214 }}>次男</span>
+      <span>{money}円</span>
+      <ThirdSon money={money} />
+    </div>
+  );
 };
 
-export default Home;
+// 三男コンポーネント
+const ThirdSon: FC<{ money: number }> = ({ money }) => {
+  return (
+    <div style={{ backgroundColor: "pink" }}>
+      <span style={{ display: "block", height: 200 }}>三男</span>
+      <span>{money}円</span>
+    </div>
+  );
+};
+
+export default Parent;
