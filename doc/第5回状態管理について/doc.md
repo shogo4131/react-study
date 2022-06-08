@@ -14,7 +14,6 @@ const App = () => {
   return (
     <>
       <span>Count: {count}</span/>
-      <button onClick={() => setCount(initialCount)}>Reset</button>
       <button onClick={() => setCount(prevCount => prevCount - 1)}>-</button>
       <button onClick={() => setCount(prevCount => prevCount + 1)}>+</button>
     </>
@@ -47,7 +46,7 @@ const App => () {
   const [state, dispatch] = useReducer(reducer, initialState);
   return (
     <>
-     <span>Count: {count}</span/>
+      <span>Count: {count}</span/>
       <button onClick={() => dispatch({type: 'decrement'})}>-</button>
       <button onClick={() => dispatch({type: 'increment'})}>+</button>
     </>
