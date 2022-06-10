@@ -1,12 +1,6 @@
 # React 状態管理とは
 ローカル、グローバルの状態管理の方法がある。
 
-## バケツリレーを理解する
-- 親コンポーネントから子コンポーネントに値を渡していくフロー
-
-![スクリーンショット 2022-06-05 21 05 47](https://user-images.githubusercontent.com/60390181/172049608-bf419d28-a4f3-4409-af07-449c6743acbf.png)
-
-
 ## ローカルState管理
 各コンポーネント内で状態管理を行う。  
 規模が小さいアプリや、複数のコンポーネントにまたがって使用する値がない場合はローカルでの管理が好ましい。
@@ -20,13 +14,13 @@ const App = () => {
   return (
     <>
       <span>Count: {count}</span/>
-      <button onClick={() => setCount(initialCount)}>Reset</button>
       <button onClick={() => setCount(prevCount => prevCount - 1)}>-</button>
       <button onClick={() => setCount(prevCount => prevCount + 1)}>+</button>
     </>
   );
 }
 ```
+※ 詳しくはカル兄さんの以前の勉強会資料を確認してください[useState](https://github.com/Yota-K/react-study/blob/main/doc/%E7%AC%AC2%E5%9B%9E/useState%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6.md)
 
 ### useReducer
 - useStateと同じく、各コンポーネントで状態を管理する
@@ -52,7 +46,7 @@ const App => () {
   const [state, dispatch] = useReducer(reducer, initialState);
   return (
     <>
-     <span>Count: {count}</span/>
+      <span>Count: {count}</span/>
       <button onClick={() => dispatch({type: 'decrement'})}>-</button>
       <button onClick={() => dispatch({type: 'increment'})}>+</button>
     </>
@@ -60,7 +54,12 @@ const App => () {
 }
 ```
 
-※詳しくは[React Docs Beta版](https://beta-reactjs-org-git-effects-fbopensource.vercel.app/)へ
+※ 詳しくはカル兄さんの以前の勉強会資料を確認してください[useReducer](https://github.com/Yota-K/react-study/blob/main/doc/%E7%AC%AC2%E5%9B%9E/useContext%E3%81%A8useReducer%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6.md)
+
+## バケツリレーを理解する
+- 親コンポーネントから子コンポーネントに値を渡していくフロー
+
+![スクリーンショット 2022-06-05 21 05 47](https://user-images.githubusercontent.com/60390181/172049608-bf419d28-a4f3-4409-af07-449c6743acbf.png)
 
 ## グローバルState管理
 各コンポーネント単位で状態を管理するのではなく、グローバルで管理することによって各コンポーネントから値を参照できる。  
@@ -102,7 +101,7 @@ const App => () {
 - 大規模なアプリ開発では力を発揮する
 - JavsScript製なので実はVue、Vanila JSなどでも使用できる。
 - action、reducer、dispatch、storeなどファイルを分けて管理するのが一般的なので、ファイル数が増加してしまう。
-- Reduxで非同期処理を実現させるには、別でmiddllewareライブラリ(redux-thunk、redux-sage)を導入しないといけない。
+- Reduxで非同期処理を実現させるには、別でmiddllewareライブラリ(redux-thunk、redux-saga)を導入しないといけない。
 - 恐らく一番最古残でシェア率が高い状態管理ライブラリ。
 - どうしても初学者には学習コストが高くなってしまう。
 - [redux devtools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd)というChromeの拡張機能があり、Stateの流れを画面で確認できる
