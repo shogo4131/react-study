@@ -17,4 +17,5 @@
  Redux Toolkitは使用していません。  
 ※Reduxの概念さえ理解すれば、Toolkitは学習コストは低くなる。
 
+## Fluxのデータフロー
 
