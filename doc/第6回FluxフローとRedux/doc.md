@@ -12,8 +12,9 @@
 - Reduxから他の状態管理ライブラリに置き換える時に、概念を理解していないとコードが読めない
 
 結論: コードが読めない
-※現在は、公式でも[Redux Toolkit](https://redux-toolkit.js.org/)を使用することを推奨しているが、今回はreduxのフローを理解してもらうために
- Redux Toolkitは使用していません
-※Reduxの概念さえ理解すれば、ToolkitはReduxのボイラーテンプレートを無くして簡単にしたものになるので、学習コストは低くなる
+ 
+※公式では[Redux Toolkit](https://redux-toolkit.js.org/)を使用することを推奨しているが、今回はreduxの根本的なデータフローを理解してもらうために
+ Redux Toolkitは使用していません。  
+※Reduxの概念さえ理解すれば、Toolkitは学習コストは低くなる。
 
 
