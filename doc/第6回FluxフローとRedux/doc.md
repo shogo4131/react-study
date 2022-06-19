@@ -18,4 +18,11 @@
 ※Reduxの概念さえ理解すれば、Toolkitは学習コストは低くなる。
 
 ## Fluxのデータフロー
+![スクリーンショット 2022-06-19 20 38 56](https://user-images.githubusercontent.com/60390181/174478993-562399ee-89f8-478c-aee9-01d0424ea3fd.png)
 
+- Action(ActionCreator): stateを変更するActionを設定するところ
+- View: ActionCreatorを発行するところ
+- Dispatcher: ActionCreatorで発行されたActionをReducerへ渡す接続部分
+- Store: stateを保存しておくところ。内部にReducerあり
+- Reducer: Actionを受け取り、既存のstateを新しいstateに更新する部分
+- Selector: 更新されたstateをstoreから取ってくる接続部分
