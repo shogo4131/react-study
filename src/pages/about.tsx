@@ -1,7 +1,5 @@
 import type { NextPage } from "next";
 import { FC } from "react";
-import { useRecoilValue } from "recoil";
-import bankAtom from "../store/bank.atom";
 
 // 家族の住んでいる場所は別々
 // 親コンポーネント
@@ -37,11 +35,11 @@ const SecondSon: FC = () => {
 // 三男コンポーネント
 const ThirdSon: FC = () => {
   // 親の銀行口座から10000円を取得する
-  const money = useRecoilValue<number>(bankAtom);
+
   return (
     <div style={{ backgroundColor: "pink" }}>
       <span style={{ display: "block", height: 200 }}>三男</span>
-      <span>{money}円</span>
+      {/* <span>{money}円</span> */}
     </div>
   );
 };

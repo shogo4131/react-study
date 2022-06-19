@@ -1,12 +1,13 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
-import { RecoilRoot } from "recoil";
+import { Provider } from "react-redux";
+import store from "../store/store";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <RecoilRoot>
-      <Component {...pageProps} />
-    </RecoilRoot>
+    <Provider store={store}>
+      <Component {...pageProps} />;
+    </Provider>
   );
 }
 
