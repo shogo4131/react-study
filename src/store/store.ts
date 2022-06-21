@@ -3,6 +3,8 @@ import { composeWithDevTools } from "redux-devtools-extension";
 
 import rootReducer from "./rootReducer";
 
+export type RootState = ReturnType<typeof rootReducer>;
+
 // storeにreducerの登録
 // redux devtoolsの設定
 const store = legacy_createStore(rootReducer, composeWithDevTools());
