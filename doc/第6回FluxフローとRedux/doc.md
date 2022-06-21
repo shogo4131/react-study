@@ -26,3 +26,8 @@
 - Store: stateを保存しておくところ。内部にReducerあり
 - Reducer: Actionを受け取り、既存のstateを新しいstateに更新する部分
 - Selector: 更新されたstateをstoreから取ってくる接続部分
+
+### 身近な物に置き換えてデータの流れを理解しよう
+ - 三男がATMにお金を振り込むまでの一連の流れ
+![スクリーンショット 2022-06-21 22 22 12](https://user-images.githubusercontent.com/60390181/174809661-7a856223-96c4-42e4-aed3-a400386f2077.png)
+
