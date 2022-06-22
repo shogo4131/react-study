@@ -7,13 +7,6 @@
 - View,Actiton,Dispatcher,Storeの4つで構成されている
 - 単方向にデータが流れていくので、データの流れを追いやすくなる
 
-## ReactでReduxを使う際に必要なライブラリ
-*は無くても良い
-- redux
-- react-redux
-- ※redux-actions
-- *redux-thunk, redux-saga
-
 ## なぜ、Reduxを勉強するのか
 - Reduxは歴史が長く、Reactを昔から使っているプロジェクトだと導入されている可能性が高いので勉強しておかないとコードが読めない可能性が大(自分は死にました)
 - Reduxから他の状態管理ライブラリに置き換える時に、概念を理解していないとコードが読めない
@@ -23,6 +16,13 @@
 ※公式では[Redux Toolkit](https://redux-toolkit.js.org/)を使用することを推奨しているが、今回はreduxの根本的なデータフローを理解してもらうために
  Redux Toolkitは使用していません。  
 ※Reduxの概念さえ理解すれば、Toolkitは学習コストは低くなる。
+
+## ReactでReduxを使う際に必要なライブラリ
+*は無くても良い
+- redux
+- react-redux
+- ※redux-actions
+- *redux-thunk, redux-saga
 
 ## Fluxのデータフロー
 ![スクリーンショット 2022-06-19 20 38 56](https://user-images.githubusercontent.com/60390181/174478993-562399ee-89f8-478c-aee9-01d0424ea3fd.png)
