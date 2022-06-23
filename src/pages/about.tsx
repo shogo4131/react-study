@@ -44,14 +44,14 @@ const ThirdSon: FC = () => {
   // 振り込みボタン
   const onClickPostHandler = useCallback(() => {
     // 10000万円を振り込む
-    dispatch(postMoney(money + 10000));
-  }, [dispatch, money]);
+    dispatch(postMoney(10000));
+  }, [dispatch]);
 
   // 振り込みボタン
   const onClickGetHandler = useCallback(() => {
     // 1000円を引き出す
-    dispatch(postMoney(money - 1000));
-  }, [dispatch, money]);
+    dispatch(postMoney(1000));
+  }, [dispatch]);
 
   return (
     <div style={{ backgroundColor: "pink" }}>

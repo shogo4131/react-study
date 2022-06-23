@@ -19,14 +19,14 @@ const bankReducer = (state = inititalState, action: Actiton) => {
       return {
         ...state,
         // 銀行口座の残高を振り込んで更新
-        money: action.payload.money,
+        money: state.money + action.payload.money,
       };
 
     case GET_MONEY:
       return {
         ...state,
         // 銀行口座の残高から引き出して更新
-        money: action.payload.money,
+        money: state.money - action.payload.money,
       };
 
     default:
