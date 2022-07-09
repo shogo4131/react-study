@@ -10,8 +10,8 @@
 - [資料](https://github.com/shogo4131/react-state-management/blob/main/doc/%E7%AC%AC6%E5%9B%9EFlux%E3%83%95%E3%83%AD%E3%83%BC%E3%81%A8Redux/doc.md)
 - [サンプルソース](https://github.com/shogo4131/react-state-management/tree/feature/redux-study/src)
 
-## 第7回
-### Zustand
+## 第7回(2022/7/13予定)
+### パフォーマンス(メモ化)
 - 準備中
 
 ## 第8回
