@@ -101,7 +101,7 @@ const App => () {
 - 大規模なアプリ開発では力を発揮する
 - JavsScript製なので実はVue、Vanila JSなどでも使用できる。
 - action、reducer、dispatch、storeなどファイルを分けて管理するのが一般的なので、ファイル数が増加してしまう。
-- Reduxで非同期処理を実現させるには、別でmiddllewareライブラリ(redux-thunk、redux-saga)を導入しないといけない。
+- Reduxで非同期処理を実現させるには、別でmiddllewareライブラリ(redux-thunk、redux-saga)を導入した方がいい。
 - 恐らく一番最古残でシェア率が高い状態管理ライブラリ。
 - どうしても初学者には学習コストが高くなってしまう。
 - [redux devtools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd)というChromeの拡張機能があり、Stateの流れを画面で確認できる

@@ -17,12 +17,27 @@
  Redux Toolkitは使用していません。  
 ※Reduxの概念さえ理解すれば、Toolkitは学習コストは低くなる。
 
+## ReactでReduxを使う際に必要なライブラリ
+*は無くても良い
+- redux
+- react-redux
+- ※redux-actions
+- *redux-thunk, redux-saga
+
 ## Fluxのデータフロー
 ![スクリーンショット 2022-06-19 20 38 56](https://user-images.githubusercontent.com/60390181/174478993-562399ee-89f8-478c-aee9-01d0424ea3fd.png)
 
-- Action(ActionCreator): stateを変更するActionを設定するところ
 - View: ActionCreatorを発行するところ
+- Action(ActionCreator): stateを変更するActionを設定するところ
 - Dispatcher: ActionCreatorで発行されたActionをReducerへ渡す接続部分
 - Store: stateを保存しておくところ。内部にReducerあり
 - Reducer: Actionを受け取り、既存のstateを新しいstateに更新する部分
 - Selector: 更新されたstateをstoreから取ってくる接続部分
+
+### 身近な物に置き換えてデータの流れを理解しよう
+ - 三男がATMにお金を振り込むまでの一連の流れ
+![スクリーンショット 2022-06-21 22 22 12](https://user-images.githubusercontent.com/60390181/174809661-7a856223-96c4-42e4-aed3-a400386f2077.png)
+
+## その他
+自分もreduxを理解するのに2ヶ月要したのでソースを写経して自分で手を動かして復習してみてください。
+
