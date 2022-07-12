@@ -44,16 +44,13 @@ const Count: FC<{ count: number }> = React.memo(({ count }) => {
   
 ### useCallbackを単体でも使用した方がいいのか
 コンポーネントの中で宣言されている関数はコンポーネントが再レンダリングされる度に再生成されるのでuseCallbackで囲っておいた方が良いという意見をちらほら聞く。
-  
-[結論]
-カスタムフックは囲め、それ以外は囲まなくて良い(個人的な主観も含む)
 
+### useMemo
+公式: [useMemo](https://ja.reactjs.org/docs/hooks-reference.html#usememo)
+
+- 計算結果等をメモ化してスキップできる
+ 
+ ## 結論
 - 関数宣言自体が重い処理ではないのでわざわざ囲む必要性をあまり感じない
 - レンダリングの度にuseCallbackのhooks APIを読み込むので場合によっては無駄にメモリを食う可能性がある
 - React自体が大分高速なので、本当に動作が遅くなった時に使用した方がいい。
-  
-
-
-
-
-### useMemo
