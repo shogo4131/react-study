@@ -12,6 +12,8 @@
 ## 第7回(2022/7/13予定)
 ### パフォーマンス(メモ化)
 - [資料](https://github.com/shogo4131/react-study/blob/main/doc/%E7%AC%AC7%E5%9B%9E%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9(%E3%83%A1%E3%83%A2%E5%8C%96)/doc.md)
+- [サンプルソース(useCallback)](https://github.com/shogo4131/react-study/blob/feature/memo/src/pages/callback.tsx)
+- [サンプルソース(useMemo)](https://github.com/shogo4131/react-study/blob/feature/memo/src/pages/memo.tsx)
 
 ## 第8回
 ### Recoil
