@@ -14,7 +14,7 @@
 - useMemo
 
 ### useCallback、React.memo
-公式: [useCallback](ttps://ja.reactjs.org/docs/hooks-reference.html#usecallback)
+公式: [useCallback](https://ja.reactjs.org/docs/hooks-reference.html#usecallback)
 - 関数の再生成を防ぐ(React.memoと併用しないと効果を発揮しない)
 
 <details>
@@ -63,4 +63,4 @@ const Count: FC<{ count: number }> = React.memo(({ count }) => {
   - React自体が大分高速なので、本当に動作が遅くなった時に使用した方がいい。
 
 - useMemo
- - 公式では必要な時以外は使用しなくて良いとされているが、チームと相談して積極的に使用しても良いと思う
+  - 公式では必要な時以外は使用しなくて良いとされているが、チームと相談して積極的に使用しても良いと思う
