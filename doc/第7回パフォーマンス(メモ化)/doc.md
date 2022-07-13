@@ -3,12 +3,18 @@
 ## メモ化ってなに？？
 再レンダリングが走る際に、不要な関数や値を再生成しないための処理
 
+## Reactで再レンダリングが走るタイミング
+- stateが更新された時
+- propsが更新された時
+- 親コンポーネントが再レンダリングされた時
+
 ## Reactのメモ化API3選
 - useCallback
 - React.memo
 - useMemo
 
 ### useCallback、React.memo
+公式: [useCallback](ttps://ja.reactjs.org/docs/hooks-reference.html#usecallback)
 - 関数の再生成を防ぐ(React.memoと併用しないと効果を発揮しない)
 
 <details>
@@ -51,6 +57,10 @@ const Count: FC<{ count: number }> = React.memo(({ count }) => {
 - 計算結果等をメモ化してスキップできる
  
  ## 結論
-- 関数宣言自体が重い処理ではないのでわざわざ囲む必要性をあまり感じない
-- レンダリングの度にuseCallbackのhooks APIを読み込むので場合によっては無駄にメモリを食う可能性がある
-- React自体が大分高速なので、本当に動作が遅くなった時に使用した方がいい。
+- useCallback
+  - 関数宣言自体が重い処理ではないのでわざわざ囲む必要性をあまり感じない
+  - レンダリングの度にuseCallbackのhooks APIを読み込むので場合によっては無駄にメモリを食う可能性がある
+  - React自体が大分高速なので、本当に動作が遅くなった時に使用した方がいい。
+
+- useMemo
+ - 公式では必要な時以外は使用しなくて良いとされているが、チームと相談して積極的に使用しても良いと思う
